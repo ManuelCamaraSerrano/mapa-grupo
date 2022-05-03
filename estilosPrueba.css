@@ -1,0 +1,17 @@
+.masInfo{
+    background-color: antiquewhite;
+    width: 50%;
+    padding: 1%;
+    word-wrap: break-word;
+
+}
+
+
+.masInfo label{
+    font-weight: bold;
+}
+
+.masInfo p {
+    display: inline;
+}
+
