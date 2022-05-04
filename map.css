@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
 }
+
+
 #map {
     position: absolute;
     top: 0;
@@ -11,40 +13,51 @@ body {
 
 
 .leaflet-popup-content-wrapper{
+    width: 360px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    transition: height 0.25s linear;
+}
+
+.expanded{
+    height: 480px;
+}
+
+.leaflet-popup-content{
+    width: auto;
+    height: auto;
+}
+
+.leaflet-popup-content p{
+    margin-bottom: 4px;
+    margin-top: 1px;
 }
 
 .masInfo{
+    width: auto;
+    height: auto;
     background-color: white;
-    border-radius: 10px 10px;
-    width: 100%;
-    height: 300px;
-    word-wrap: break-word;
-    overflow-y: auto;
-    
-
+    word-wrap: break-word;  
 }
 
-.masInfo img{
-    object-fit: cover;
-    object-position: center;
+.imagen img{
+    margin-bottom: 10px;
 }
 
 
 .masInfo label{
     font-weight: bold;
-    color: blue;
+    color: #002b4c;
 }
+
 
 .masInfo h4{
     font-weight: bold;
     margin-bottom: 2%;
 }
 
-.masInfo p{
-    font-size: 12px;
-    padding: 0px;
-    margin: auto;
-}
 
 
 

@@ -21,50 +21,63 @@ $(document).ready(function(){
     ],{icon: customIcon})
 
     marker.bindPopup(`<div class="masInfo">
-    <div class="row col-10 offset-1">
-        <div class="d-flex justify-content-center">
-            <img src="perro.jpg" class="col-10" alt="">
-        </div>
-        <div class="col-6">
-            <label for="Nombre">Nombre:</label>
-            <p>Yogui</p>
-        </div>
-        <div class="col-6">
-            <label for="Tipo">Tipo:</label>
-            <p>Perro</p>
-        </div>
 
-        <div class="col-6">
-            <label for="Raza">Raza:</label>
-            <p>Labrador</p>
-        </div>
+                        <div class="row">
+                            <div class="imagen">
+                                <img src="perro.jpg" class="col-12" alt="">
+                            </div>
+                        </div>
 
-        <div class="col-6">
-            <label for="Color">Color:</label>
-            <p>Blanco</p>
-        </div>
+                        <div class="row">  
 
-        <div class="col-10">
-            <label for="Color">Descripción:</label>
-            <p class="descripcion">jasbnfuuuuuuuuuuuuuuuuuuuuuu uuuuuuuu uuuuuuuuuu uuuuuuuuuuu uuuuuuuu uuuuuuuus fdsfffffffff fffffffffffff fffffffuuuuuuuuu uuuuu</p>
-        </div>
-        <div class="col-8">
-            <h4>Contacto:</h4>
-        </div>
+                            <div class="col-5 offset-1">
+                                <label for="Nombre">Nombre:</label>
+                                <p>Yogui</p>
+                            </div>
 
-        <div class="col-6">
-            <label for="Color">Email:</label>
-            <p>bdsfihb@gmail.com</p>
-        </div>
+                            <div class="col-5 offset-1">
+                                <label for="Tipo">Especie:</label>
+                                <p>Perro</p>
+                            </div>
 
-        <div class="col-6">
-            <label for="Color">Teléfono:</label>
-            <p>657 36 27 36</p>
-        </div>
+                            <div class="col-5 offset-1">
+                                <label for="Raza">Raza:</label>
+                                <p>Labrador</p>
+                            </div>
 
-    </div>
+                            <div class="col-5 offset-1">
+                                <label for="Color">Color:</label>
+                                <p>Blanco</p>
+                            </div>
+
+                            <div class="col-11 offset-1">
+                                <label for="Color" class="">Descripción:</label>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam sit at adipisci odio accusantium cum, facilis sapiente temporibus saepe facere? Fuga nam aut ipsam, totam maxime ex libero ratione.</p>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <button class="subir col-2">aaaaa</button>
+                            </div>
+
+                            <div class="col-8">
+                                <h4>Contacto:</h4>
+                            </div>
+
+                            <div class="col-6">
+                                <label for="Color">Email:</label>
+                                <p>bdsfihb@gmail.com</p>
+                            </div>
+
+                            <div class="col-6">
+                                <label for="Color">Teléfono:</label>
+                                <p>657 36 27 36</p>
+                            </div>
+                            
+
+                        </div>
     
-</div>`);
+                </div>`);
+
+
     markers.addLayer(marker)
     }
 
@@ -78,7 +91,13 @@ $(document).ready(function(){
     $( ".masInfo" ).click(function(ev) {
         ev.preventDefault();
 
-        alert( "Handler for .click() called." );
+        alert( "hhh." );
+
+    });
+
+    $( ".leaflet-popup-pane" ).on( 'click', ".subir" ,function() {
+
+       $(".leaflet-popup-content-wrapper").toggleClass("expanded");
 
     });
 
