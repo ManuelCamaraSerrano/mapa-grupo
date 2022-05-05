@@ -55,19 +55,19 @@ $(document).ready(function(){
                                 <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam sit at adipisci odio accusantium cum, facilis sapiente temporibus saepe facere? Fuga nam aut ipsam, totam maxime ex libero ratione.</p>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <button class="subir col-2">aaaaa</button>
+                                <i class="fas fa-caret-down subir"></i>
                             </div>
 
-                            <div class="col-8">
-                                <h4>Contacto:</h4>
+                            <div class="col-8 offset-1">
+                                <h5>Contacto:</h5>
                             </div>
 
-                            <div class="col-6">
+                            <div class="col-5 offset-1">
                                 <label for="Color">Email:</label>
                                 <p>bdsfihb@gmail.com</p>
                             </div>
 
-                            <div class="col-6">
+                            <div class="col-5 offset-1">
                                 <label for="Color">Teléfono:</label>
                                 <p>657 36 27 36</p>
                             </div>
@@ -95,9 +95,24 @@ $(document).ready(function(){
 
     });
 
-    $( ".leaflet-popup-pane" ).on( 'click', ".subir" ,function() {
 
-       $(".leaflet-popup-content-wrapper").toggleClass("expanded");
+
+    $( ".leaflet-popup-pane" ).on( 'click', ".subir" ,function() {  // Controlamos el click del icono de expandir
+
+        $(".leaflet-popup-content-wrapper").toggleClass("expanded"); // Cambiamos la clase del contenedor
+
+        if($(".subir").attr("class") == "fas fa-caret-down subir"){  // Cambiamos el icono cuando se pulse
+
+            $(".subir").attr("class","fas fa-caret-up subir");
+
+        }
+        else{
+
+            $(".subir").attr("class","fas fa-caret-down subir");
+
+        }
+
+       
 
     });
 
